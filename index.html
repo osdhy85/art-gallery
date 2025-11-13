@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#ffffff">
+	<title>Art Gallery</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32.png">
+	<link rel="icon" href="images/favicon/favicon.svg" type="image/svg+xml">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple.png">
+	<link rel="manifest" href="images/favicon/manifest.webmanifest.json">
+	<link rel="preload" href="fonts/Epilogue-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="fonts/RethinkSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="css/style.css" as="style">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- <a href="#main-content" class="skip-link">Skip to main content</a> -->
+	<div class="layout">
+		<aside class="sidebar" aria-label="Main navigation">
+			<a class="sidebar__logo" href="/" aria-label="Go to homepage">
+				<svg xmlns="http://www.w3.org/2000/svg" width="70" height="20" fill="none" role="img" aria-label="NORG Logo"><title>NORG Logo</title><g clip-path="url(#a)"><path fill="#2D2D2D" d="M26.684 0c1.19 0 2.291.22 3.306.66a7.402 7.402 0 0 1 2.677 1.922c.761.843 1.352 1.885 1.771 3.123.43 1.239.644 2.661.644 4.269 0 1.607-.215 3.035-.644 4.282-.428 1.238-1.027 2.288-1.796 3.148a7.576 7.576 0 0 1-2.665 1.937c-1.014.439-2.112.659-3.293.659a8.168 8.168 0 0 1-3.28-.66 7.7 7.7 0 0 1-2.677-1.936c-.762-.86-1.357-1.91-1.786-3.148-.42-1.247-.63-2.675-.63-4.282 0-1.608.21-3.03.63-4.269.43-1.238 1.024-2.28 1.786-3.123A7.431 7.431 0 0 1 23.39.659 8.263 8.263 0 0 1 26.684 0Zm36.112 0c1.312 0 2.423.22 3.333.66.918.43 1.662.987 2.23 1.672.578.685.994 1.406 1.247 2.161.263.755.394 1.458.394 2.108v.158h-3.36V6.6a3.94 3.94 0 0 0-.236-1.344 3.6 3.6 0 0 0-.721-1.2 3.47 3.47 0 0 0-1.207-.856c-.481-.21-1.042-.315-1.68-.315a4.47 4.47 0 0 0-2.44.724c-.753.483-1.365 1.252-1.837 2.306-.464 1.045-.697 2.42-.697 4.123 0 1.291.132 2.39.395 3.294.262.905.616 1.638 1.062 2.2.455.562.972.976 1.55 1.24a4.594 4.594 0 0 0 1.849.381c.875 0 1.601-.15 2.178-.448.586-.299 1.041-.672 1.365-1.12.332-.448.542-.887.63-1.317v-1.515h-4.134v-2.61h7.23v9.566h-1.994l-.289-2.16c-.061.158-.205.373-.433.645-.218.273-.534.55-.945.83-.41.273-.936.5-1.574.685-.63.193-1.387.29-2.27.29-1.505 0-2.875-.386-4.108-1.16-1.225-.772-2.2-1.902-2.926-3.386-.726-1.484-1.089-3.29-1.089-5.415 0-2.134.376-3.947 1.128-5.44.753-1.494 1.768-2.632 3.045-3.413C59.778.396 61.212 0 62.796 0ZM11.98 17.003V.283h3.372v19.434H9.854L3.36 3.14v16.577H0V.283h5.419l6.561 16.72ZM45.495.283c1.95 0 3.417.448 4.397 1.344.98.896 1.47 2.214 1.47 3.953 0 1.019-.194 1.884-.579 2.596-.385.71-.852 1.26-1.403 1.646-.551.387-1.077.607-1.575.66.507.035.997.166 1.47.394.472.228.857.59 1.155 1.081.306.483.459 1.138.459 1.963v3.94c0 .412.034.795.104 1.146.07.342.158.58.263.71h-3.478c-.087-.157-.165-.4-.235-.724a6.312 6.312 0 0 1-.093-1.133v-3.53c0-.8-.223-1.406-.669-1.82-.446-.412-1.12-.618-2.02-.618h-3.347v7.826h-3.372V.283h7.453Zm-18.81 2.59a4.39 4.39 0 0 0-2.44.724c-.736.483-1.326 1.247-1.772 2.293-.438 1.036-.657 2.397-.657 4.084 0 1.686.22 3.056.657 4.11.446 1.054 1.036 1.827 1.771 2.32a4.333 4.333 0 0 0 2.44.737c.91 0 1.733-.246 2.467-.738.735-.5 1.317-1.278 1.745-2.332.438-1.054.657-2.42.657-4.097 0-1.687-.22-3.048-.657-4.084-.437-1.046-1.023-1.81-1.757-2.293a4.372 4.372 0 0 0-2.454-.725Zm14.73 6.251h3.372a3.01 3.01 0 0 0 1.535-.395c.455-.273.814-.65 1.077-1.133.27-.483.406-1.05.406-1.7 0-.948-.272-1.66-.814-2.134-.542-.475-1.312-.712-2.31-.712h-3.267v6.074Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h70v20H0z"/></clipPath></defs></svg>
+			</a>
+			<button class="sidebar__hamburger" aria-controls="sidebarNav" aria-expanded="false" aria-label="Open menu">
+				<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="12" cy="12" r="3" fill="#262626"/>
+					<circle cx="24" cy="12" r="3" fill="#262626"/>
+					<circle cx="12" cy="24" r="3" fill="#262626"/>
+					<circle cx="24" cy="24" r="3" fill="#262626"/>
+				</svg>
+			</button>
+			<nav class="sidebar__nav" aria-label="Main navigation">
+				<ul class="sidebar__nav-list" id="sidebarNav" role="list">
+					<li class="sidebar__nav-item">
+						<a href="#painting">Painting &amp; Drawing</a>
+					</li>
+					<li class="sidebar__nav-item">
+						<a href="#photography">Photography</a>
+					</li>
+					<li class="sidebar__nav-item">
+						<a href="#selectedWorks">Selected works</a>
+					</li>
+					<li class="sidebar__nav-item sidebar__nav-item--contact">
+						<a href="#contact">Contact</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="sidebar__overlay-nav" id="sidebarOverlayNav" role="dialog" aria-modal="true" aria-label="Mobile navigation menu">
+				<ul class="sidebar__nav-list" role="list">
+					<li class="sidebar__nav-item">
+						<a href="#painting">Painting &amp; Drawing</a>
+					</li>
+					<li class="sidebar__nav-item">
+						<a href="#photography">Photography</a>
+					</li>
+					<li class="sidebar__nav-item">
+						<a href="#selectedWorks">Selected works</a>
+					</li>
+					<li class="sidebar__nav-item sidebar__nav-item--contact">
+						<a href="#contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</aside>
+		<main class="main-content" id="main-content">
+			<section class="intro">
+				<div class="intro__hero">
+					<img src="https://placehold.co/980x200" loading="eager" width="980" height="200" alt="Norg's Art Gallery Hero">
+				</div>
+				<h1 class="intro__title">Norg&#769;s Art Gallery</h1>
+				<h2 class="intro__subtitle">
+					Lorem ipsum dolor sit&nbsp;amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut labore.
+				</h2>
+			</section>
+			<hr class="divider">
+			<section class="gallery-section" id="painting">
+				<div class="gallery-section__header">
+					<h2 class="gallery-section__title">Painting &amp; Drawing</h2>
+					<a href="#" class="gallery-section__see-more" aria-label="View more paintings and drawings">See more</a>
+				</div>
+				<div class="gallery-hero">
+					<a href="#" aria-label="View featured artwork">
+						<picture>
+							<!--(≥768px)-->
+							<source media="(min-width: 768px)" srcset="images/home/img-hero-950w.jpg 1x, images/home/img-hero-1900w.jpg 2x">
+							<!--(480-767px)-->
+							<source media="(min-width: 480px)" srcset="images/home/img-hero-768w.jpg 1x, images/home/img-hero-1536w.jpg 2x">
+							<!--(≤479px)-->
+							<source media="(max-width: 479px)" srcset="images/home/img-hero-375w.jpg 1x, images/home/img-hero-750w.jpg 2x">
+							<!--Fallback-->
+							<img src="images/home/img-hero-950w.jpg" srcset="images/home/img-hero-1900w.jpg 2x" width="950" height="684" loading="lazy" decoding="async" alt="Featured artwork from Painting & Drawing collection">
+						</picture>
+					</a>
+				</div>
+				<div class="gallery-grid gallery-grid--painting">
+					<div class="gallery-grid__item">
+						<img src="https://placehold.co/300x220" loading="lazy" width="300" height="220" alt="Artwork: Lorem ipsum by Artist Name">
+						<div class="gallery-caption">
+							<div class="gallery-caption__title">Lorem ipsum</div>
+							<div class="gallery-caption__artist">Artist Name</div>
+						</div>
+					</div>
+					<div class="gallery-grid__item">
+						<img src="https://placehold.co/300x220" loading="lazy" width="300" height="220" alt="Artwork: Lorem ipsum by Artist Name">
+						<div class="gallery-caption">
+							<div class="gallery-caption__title">Lorem ipsum</div>
+							<div class="gallery-caption__artist">Artist Name</div>
+						</div>
+					</div>
+					<div class="gallery-grid__item">
+						<img src="https://placehold.co/300x220" loading="lazy" width="300" height="220" alt="Artwork: Lorem ipsum by Artist Name">
+						<div class="gallery-caption">
+							<div class="gallery-caption__title">Lorem ipsum</div>
+							<div class="gallery-caption__artist">Artist Name</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<hr class="divider">
+			<section class="gallery-section" id="photography">
+				<div class="gallery-section__header">
+					<h2 class="gallery-section__title">Photography</h2>
+					<a href="#" class="gallery-section__see-more" aria-label="View more photography works">See more</a>
+				</div>
+				<div class="gallery-grid gallery-grid--masonry">
+					<div class="gallery-grid__column">
+						<div class="gallery-grid__item">
+							<img src="https://placehold.co/465x558" loading="lazy" width="465" height="558" alt="Photography: Tall Image by Artist Name">
+							<div class="gallery-caption">
+								<div class="gallery-caption__title">Tall Image</div>
+								<div class="gallery-caption__artist">Artist Name</div>
+							</div>
+						</div>
+					</div>
+					<div class="gallery-grid__column">
+						<div class="gallery-grid__item">
+							<img src="https://placehold.co/465x378" loading="lazy" width="465" height="378" alt="Photography: Short Image by Artist Name">
+							<div class="gallery-caption">
+								<div class="gallery-caption__title">Short Image</div>
+								<div class="gallery-caption__artist">Artist Name</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<hr class="divider">
+			<section class="selected-works" id="selectedWorks">
+				<h2 class="selected-works__title">Selected works</h2>
+				<div class="selected-works__grid">
+					<div class="selected-works__item">
+						<div class="selected-works__work-title">Artwork name</div>
+						<div class="selected-works__year">2021</div>
+						<a href="#" class="selected-works__see-more" aria-label="View details for Artwork name">See more</a>
+					</div>
+					<div class="selected-works__item">
+						<div class="selected-works__work-title">Artwork name</div>
+						<div class="selected-works__year">2019</div>
+						<a href="#" class="selected-works__see-more" aria-label="View details for Artwork name">See more</a>
+					</div>
+					<div class="selected-works__item">
+						<div class="selected-works__work-title">Artwork name</div>
+						<div class="selected-works__year">2018</div>
+						<a href="#" class="selected-works__see-more" aria-label="View details for Artwork name">See more</a>
+					</div>
+					<div class="selected-works__item">
+						<div class="selected-works__work-title">Artwork name</div>
+						<div class="selected-works__year">2017</div>
+						<a href="#" class="selected-works__see-more" aria-label="View details for Artwork name">See more</a>
+					</div>
+				</div>
+				<div class="selected-works__grid">
+					<div class="selected-works__item">
+						<div class="selected-works__work-title">Artwork name</div>
+						<div class="selected-works__year">2021</div>
+						<a href="#" class="selected-works__see-more" aria-label="View details for Artwork name">See more</a>
+					</div>
+					<div class="selected-works__item">
+						<div class="selected-works__work-title">Artwork name</div>
+						<div class="selected-works__year">2019</div>
+						<a href="#" class="selected-works__see-more" aria-label="View details for Artwork name">See more</a>
+					</div>
+					<div class="selected-works__item">
+						<div class="selected-works__work-title">Artwork name</div>
+						<div class="selected-works__year">2018</div>
+						<a href="#" class="selected-works__see-more" aria-label="View details for Artwork name">See more</a>
+					</div>
+					<div class="selected-works__item">
+						<div class="selected-works__work-title">Artwork name</div>
+						<div class="selected-works__year">2017</div>
+						<a href="#" class="selected-works__see-more" aria-label="View details for Artwork name">See more</a>
+					</div>
+				</div>
+			</section>
+			<hr class="divider">
+			<section class="about-gallery">
+				<img class="about-gallery__image" src="https://placehold.co/465x420" loading="lazy" width="465" sizes="" srcset="" alt="About the gallery image">
+				<div class="about-gallery__content">
+					<h2 class="about-gallery__title">About the gallery</h2>
+					<p class="about-gallery__desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat fuga exercitationem blanditiis soluta, pariatur hic alias sint praesentium consequuntur, excepturi quas sapiente modi totam officia eum voluptatem atque.</p>
+					<a href="#" class="about-gallery__learn-more" aria-label="Learn more about the gallery">Learn more</a>
+				</div>
+			</section>
+			<footer class="footer">
+				<div class="footer__top">
+					<div class="footer__logo">
+						<a href="/" aria-label="Go to homepage">
+							<svg xmlns="http://www.w3.org/2000/svg" width="130" height="37" fill="none" xmlns:v="https://vecta.io/nano" aria-hidden="true" focusable="false"><title>NORG Logo</title><g clip-path="url(#A)"><path d="M49.556 0c2.209 0 4.256.406 6.141 1.219 1.901.796 3.558 1.982 4.972 3.559 1.413 1.56 2.51 3.485 3.29 5.776.796 2.291 1.194 4.924 1.194 7.898s-.398 5.615-1.194 7.922c-.796 2.291-1.909 4.233-3.339 5.825-1.413 1.576-3.062 2.771-4.946 3.583S51.749 37 49.556 37c-2.177 0-4.208-.406-6.093-1.219s-3.541-2.007-4.971-3.583c-1.413-1.592-2.518-3.534-3.314-5.825-.78-2.307-1.17-4.948-1.17-7.922s.39-5.606 1.17-7.898c.796-2.291 1.901-4.216 3.314-5.776 1.413-1.576 3.062-2.762 4.946-3.559C45.339.406 47.379 0 49.556 0zm67.065 0c2.437 0 4.5.406 6.19 1.219 1.705.796 3.087 1.828 4.143 3.096 1.072 1.267 1.843 2.6 2.315 3.997.487 1.397.731 2.697.731 3.899v.293h-6.238v-.293c0-.845-.147-1.673-.44-2.485a6.63 6.63 0 0 0-1.34-2.219c-.601-.666-1.348-1.194-2.242-1.584s-1.933-.585-3.119-.585c-1.608 0-3.12.447-4.533 1.341-1.397.894-2.534 2.316-3.411 4.266-.861 1.934-1.292 4.477-1.292 7.629 0 2.388.244 4.419.731 6.093s1.145 3.031 1.974 4.071c.845 1.04 1.804 1.804 2.876 2.291 1.088.471 2.233.706 3.435.706 1.625 0 2.974-.276 4.046-.828 1.089-.552 1.933-1.243 2.534-2.072.618-.829 1.008-1.641 1.17-2.437v-2.803h-7.676v-4.826h13.427v17.695h-3.704l-.536-3.997c-.114.292-.381.691-.804 1.194-.406.504-.991 1.016-1.754 1.536-.764.504-1.739.925-2.925 1.267-1.17.357-2.575.537-4.216.537-2.794 0-5.337-.716-7.628-2.145-2.274-1.43-4.085-3.518-5.434-6.264s-2.023-6.085-2.023-10.018c0-3.948.699-7.304 2.097-10.066s3.281-4.867 5.653-6.313C111.016.731 113.681 0 116.621 0zM22.249 31.455V.524h6.264v35.951H18.302L6.238 5.808v30.668H0V.524h10.065l12.184 30.931zM84.489.523c3.623 0 6.344.829 8.164 2.486s2.73 4.095 2.73 7.313c0 1.885-.357 3.486-1.072 4.802s-1.584 2.332-2.607 3.047-1.999 1.121-2.925 1.219a7.42 7.42 0 0 1 2.73.73c.877.422 1.592 1.089 2.144 1.999.569.894.854 2.105.854 3.632v7.288c0 .764.064 1.47.194 2.12.13.634.292 1.073.487 1.316H88.73c-.162-.292-.308-.74-.439-1.341-.114-.617-.17-1.316-.17-2.096v-6.532c0-1.479-.415-2.6-1.243-3.364s-2.08-1.146-3.753-1.146h-6.214v14.479h-6.264V.523h13.842zm-34.934 4.79c-1.641 0-3.152.447-4.533 1.341-1.365.894-2.461 2.308-3.289 4.241-.812 1.917-1.219 4.436-1.219 7.556s.407 5.655 1.219 7.605c.828 1.95 1.924 3.38 3.289 4.29a8.07 8.07 0 0 0 4.533 1.365c1.689 0 3.216-.455 4.581-1.365 1.365-.926 2.445-2.365 3.241-4.315.812-1.95 1.219-4.476 1.219-7.58 0-3.12-.407-5.638-1.219-7.556-.812-1.934-1.901-3.347-3.266-4.241s-2.883-1.341-4.557-1.341zm27.355 11.565h6.263c1.056 0 2.006-.244 2.851-.731.845-.504 1.512-1.202 1.999-2.096.504-.894.755-1.942.755-3.145 0-1.755-.504-3.071-1.511-3.948s-2.437-1.316-4.289-1.316h-6.067v11.236z" fill="#2d2d2d"/></g><defs><clipPath id="A"><path fill="#fff" d="M0 0h130v37H0z"/></clipPath></defs></svg>
+							<span class="visually-hidden">NORG Home</span>
+						</a>
+					</div>
+					<nav class="footer__nav" aria-label="Footer navigation">
+						<a href="#contact" class="footer__link">Contact</a>
+						<a href="#main-content" class="footer__link">Back to the top</a>
+					</nav>
+				</div>
+				<hr class="footer__divider">
+				<div class="footer__bottom">
+					<div class="footer__copyright">&copy; Art Gallery 2025</div>
+					<a href="#" class="footer__licenses">Licenses</a>
+				</div>
+			</footer>
+		</main>
+	</div>
+	<button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M12 19V5M5 12l7-7 7 7"/>
+		</svg>
+	</button>
+	<script src="js/menu.js"></script>
+	<script src="js/scroll.js"></script>
+</body>
+</html>
