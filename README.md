@@ -27,7 +27,7 @@ Practice project focused on:
 
 ---
 
-## 🔡 Fonts Used
+## Fonts Used
 
 ### **Rethink Sans**  
 - Regular (400)  
